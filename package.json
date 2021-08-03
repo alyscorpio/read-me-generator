@@ -1,14 +1,27 @@
+
 {
-  "name": "static-site",
+  "name": "readme-me-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a command-line application that uses the Inquirer package to generate a README.md file from a user's input.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alyscorpio/readme-me-generator.git"
+  },
+  "keywords": [
+    "readme",
+    "md"
+  ],
+  "author": "Alys Dickerson",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alyscorpio/readme-me-generator.git"
+  },
+  "homepage": "https://github.com/alyscorpio/readme-me-generator.git#readme",
   "dependencies": {
-    "inquirer": "^6.3.1"
+    "inquirer": "^8.1.0"
   }
 }

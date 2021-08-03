@@ -88,7 +88,7 @@ inquirer
     ])
     // TODO: Create a function to write README file
     .then((answers) => {
-        const readMe = writeToFile(answers);
+        const readMe = writeFile(answers);
 
         fs.writeFile("README.md", readMe, (err) =>
         err ? console.log(err) : console.log("Great! Your new README file is all set!")
