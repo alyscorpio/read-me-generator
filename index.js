@@ -52,7 +52,13 @@ inquirer
             message: "What is your email address?",
         },
     ])
-    
+    .then((answers) => {
+        const readMe = writeToFile(answers);
+
+        fs.writeFile("README.md", readMe, (err) =>
+        err ? console.log(err) : console.log("Great! Your new README file is all set!")
+        );
+    });
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
