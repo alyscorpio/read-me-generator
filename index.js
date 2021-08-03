@@ -2,6 +2,40 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+const writeFile = (answers) =>
+    '# ${answers.title}
+![Github license](https://img.shields.io/badge/license-${answers.license}-blue.svg)
+## Description 
+${answers.description}
+
+## Table of Contents 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributors](#contributors)
+- [Test](#test)
+- [License](#license)
+- [Contact](#contact)
+
+## Installation
+${answers.installation}
+
+## Usage
+[Here](${answers.usage}) are the links where you can see the application.
+
+## Contributing
+${answers.contributing}
+
+## Tests 
+${answers.test}
+
+## License
+This application is covered under the ${answers.license} license.
+
+## Contact
+For more information about my application, visit my [Github](https://github.com/${answers.github}/).
+For additional questions, email me at ${answers.email}.
+
+
 // TODO: Create an array of questions for user input
 inquirer
     .prompt([
@@ -22,7 +56,7 @@ inquirer
         },
         {
             type: "input",
-            name: "links",
+            name: "usage",
             message: "At what links can users see the app?",
         },
         {
@@ -52,6 +86,7 @@ inquirer
             message: "What is your email address?",
         },
     ])
+    // TODO: Create a function to write README file
     .then((answers) => {
         const readMe = writeToFile(answers);
 
@@ -60,11 +95,3 @@ inquirer
         );
     });
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
